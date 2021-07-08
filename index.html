@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="img-wrapper">
+        <svg width="400" height="110" class="img">
+            <linearGradient id="linear-gradient">
+                <stop offset="0%" stop-color="#8B0000"/>
+                <stop offset="100%" stop-color="#FF0000"/>
+            </linearGradient>
+            <linearGradient id="linear-gradient-main">
+                <stop offset="0%" stop-color="#FF0000"/>
+                <stop offset="100%" stop-color="#cc0000"/>
+            </linearGradient>
+            <linearGradient id="linear-gradient-shadow">
+                <stop offset="0%" stop-color="#FFffff"/>
+                <stop offset="100%" stop-color="#FF0000"/>
+            </linearGradient>
+    
+    
+            <rect width="300" y="0" height="100" rx="20" fill="url(#linear-gradient-main)" stroke-width="3"/>
+            <!-- <rect width="30" x="0" y="0" height="100" rx="20" fill="url(#linear-gradient-shadow)" stroke-width="3"/> -->
+            <rect x="250" y="0" width="50" height="100" rx="20" fill="url(#linear-gradient)" stroke-width="3"/>
+         </svg>
+         <!-- <svg class="shadow">
+            <linearGradient id="linear-gradient-shadow2">
+                <stop offset="0%" stop-color="#FFffff" stop-opacity="0.5" />
+                <stop offset="100%" stop-color="#FFFAFA" stop-opacity="0.8"/>
+            </linearGradient>
+            <rect class="rect" width="30" x="0" y="0" height="100" rx="20" fill="url(#linear-gradient-shadow)" stroke-width="3" />
+         </svg> -->
+
+    </div>
+
+
+     <style>
+         .img-wrapper {
+        position: relative;
+        overflow: hidden;
+        width: 600px;
+        height: 100px; 
+        border-radius: 20px;
+    }
+    
+    .shadow {
+        position: absolute;
+        left: 0;
+    }
+
+    .img {
+        position: absolute;
+        left: -250px;
+        -webkit-animation: slide 0.7s forwards;
+        -webkit-animation-delay: 2s;
+        animation: slide 0.7s forwards;
+        animation-delay: 2s;
+    }
+
+    @-webkit-keyframes slide {
+        100% { left: 0; }
+    }
+
+    @keyframes slide {
+        100% { left: 0; }
+    }
+
+     </style>
+</body>
+</html>
